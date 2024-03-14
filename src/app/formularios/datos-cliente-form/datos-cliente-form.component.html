@@ -1,0 +1,62 @@
+<div class="ps-5 pe-5 pt-5 ">
+  <h4><b>Ingresa tus datos personales</b></h4>
+  <hr>
+</div>
+
+<form [formGroup]="clienteForm" (ngSubmit)="onSubmitCliente()" class="p-5">
+  <h4 ><b>Datos generales:</b></h4>
+  <div id="DatosGenerales">
+    <label for="nombre" class="mt-3">Nombre:</label>
+    <input type="text" id="nombre" formControlName="nombre" class="form-control">
+    
+    <label for="apellido" class="mt-3">Apellido:</label>
+    <input type="text" id="apellido" formControlName="apellido" class="form-control">
+ 
+    <label for="nDocumento" class="mt-3">Numero de documento</label>
+    <input type="number" id="nDocumento" formControlName="dni" class="form-control">
+    
+    <label for="" class="mt-3">Tipo de documento</label>
+    <select id="TipoDocumento" class="form-control" formControlName="tipo_dni">
+      <option *ngFor="let tipoDoc of tipoDocumento" [value]="tipoDoc.id">
+        {{tipoDoc.desc}}</option>      
+    </select>
+
+    <label for="correo" class="mt-3">Correo electronico:</label>
+    <input type="email" id="correo" formControlName="email" class="form-control">
+
+    <label for="correoConfirmacion" class="mt-3">Confirmacion Correo electronico:</label>
+    <input type="email" id="correoConfirmacion" class="form-control">
+  </div>
+
+  <div id="DatosDireccion" class="mt-4">
+    <h4><b>Selecciona tu pais de residencia:</b></h4>
+
+    <label for="" class="mt-3">Pais de residencia</label>
+    <select id="Pais" class="form-control" formControlName="pais_residencia">
+      <option *ngFor="let paises of TipoPais" [value]="paises.id">
+        {{paises.desc}} <option>
+      
+    </select>
+    
+
+    <label for="cPostal" class="mt-3">Codigo Postal:</label>
+    <input type="text" id="cPostal" formControlName="codigo_postal" class="form-control">
+    <div class="row">
+      <div class="col-8">
+        <label for="nTelefono" class="mt-3">Numero de Telefono:</label>
+        <input type="text" id="nTelefono" formControlName="telefono" class="form-control">
+      </div>
+      <div class="col-4">
+        <label for="" class="mt-3">Extension</label>
+        <input type="text" class="form-control" formControlName="extension">
+      </div>
+    </div>
+    <label for="ConfirmacionTel" class="mt-3">Confirma tu telefono:</label>
+    <input type="text" id="ConfirmacionTel" class="form-control">
+  </div>
+  <div class="mt-3">
+    <button class="btn btn-outline-primary" routerLink="../form-envio" (click)="onSubmitCliente()">Siguiente</button>
+
+  </div>
+</form>
+

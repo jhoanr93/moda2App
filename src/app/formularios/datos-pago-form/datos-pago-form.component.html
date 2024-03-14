@@ -1,0 +1,60 @@
+<div class="ps-5 pe-5 pt-5 ">
+  <h4><b>Forma de Pago</b></h4>
+  <hr>
+</div>
+
+<form [formGroup]="formDatosPago" (ngSubmit)="onSubmitDatosPago()" class="p-5">
+
+  <div id="FormaPago">
+    <h3>Pagar con tarjeta de credito o debito:</h3>
+
+    <select id="TipoTarjeta" class="form-control">
+      <option value="TarjetaCredito">Tarjeta de credito</option>
+      <option value="TarjetaDebito">Tarjeta de debito</option>
+    </select>
+    
+    <label for="nombreBono" class="mt-3">Nombre del bono (opcional)</label>
+    <input type="text" class="form-control" id="nombreBono" formControlName="nombreBono">
+    
+    <label for="nombreBanco" class="mt-3">Nombre del banco</label>
+    <input type="text" id="nombreBanco" class="form-control" formControlName="nombreBanco">
+    
+    <label for="nombreTarjeta" class="mt-3">Nombre en la tarjeta</label>
+    <input type="text" id="nombreTarjeta" class="form-control" formControlName="nombreTarjeta">
+    
+    <label for="numTarjeta" class="mt-3">Numero de la tarjeta</label>
+    <input type="text" id="numTarjeta" class="form-control" formControlName="numTarjeta">
+    
+    <label for="FechaTarjeta" class="mt-3">Fecha de Expiracion</label>
+    <input type="date" id="FechaTarjeta" class="form-control" formControlName="FechaTarjeta">
+    
+    <label for="CVV" class="mt-3">Codigo de seguridad (CVV)</label>
+    <input type="text" id="CVV" class="form-control" formControlName="CVV">
+    
+    <label for="Cuotas" class="mt-3">Numero de cuotas</label>
+    <input type="text" id="Cuotas" class="form-control" formControlName="Cuotas">
+
+    <label class="mt-3">Desea factura electronica?</label>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+      <label class="form-check-label" for="flexRadioDefault1">
+        Si
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+      <label class="form-check-label" for="flexRadioDefault2">
+        No
+      </label>
+    </div>
+    <div class="form-check mt-3">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Acepta terminos y condiciones
+      </label>
+    </div>
+
+    <button type="submit" [disabled]="formDatosPago.invalid" routerLink="../comprobante"
+      class="btn btn-primary" (click)="onSubmitDatosPago()">Siguiente</button>
+  </div>
+</form>

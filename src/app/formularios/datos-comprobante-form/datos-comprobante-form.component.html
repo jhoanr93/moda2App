@@ -1,0 +1,25 @@
+<div class="ps-5 pe-5 pt-5 ">
+    <h4><b>Comprobante de Compra</b></h4>
+    <hr>
+</div>
+
+<div class="comprobante">
+    
+    <div class="datos-comprador">
+        <p><strong>Nombre del Comprador:</strong> </p>
+        <p><strong>País de Envío:</strong> </p>
+        <p><strong>Dirección de Envío:</strong> </p>
+    </div>
+    <div class="productos">
+        <h3>Productos y Cantidades:</h3>
+        <ul>
+            <li *ngFor="let producto of productos_y_cantidades">- Cantidad: </li>
+        </ul>
+    </div>
+    <div class="detalle">
+        <p><strong>Precio Total:</strong> </p>
+        <p><strong>Tiempo Estimado de Llegada:</strong> </p>
+        <p><strong>Forma de Pago:</strong> </p>
+    </div>
+    <button (click)="aceptar()">Aceptar</button>
+</div>

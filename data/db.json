@@ -1,0 +1,195 @@
+{
+  "clientes": [
+    {
+      "id": "1",
+      "nombre": "Juan Perez",
+      "apellido": "Perez",
+      "dni": "12345678",
+      "tipo_dni": "CC",
+      "email": "juan@example.com",
+      "pais_residencia": "Colombia",
+      "codigo_postal": "111011",
+      "extension": "57",
+      "telefono": "1234567890"
+    },
+    {
+      "id": "b0518a67-ce7a-4422-8faf-165a650ee649",
+      "nombre": "Juan",
+      "apellido": "Torres",
+      "dni": 123456,
+      "tipo_dni": "CC",
+      "email": "torres@gmail.com",
+      "pais_residencia": "COL",
+      "codigo_postal": "111011",
+      "extension": "Col",
+      "telefono": "4317313"
+    },
+    {
+      "id": "69ae3d18-6853-4287-952c-081d743dfe73",
+      "nombre": "Manuel",
+      "apellido": "Jimenez",
+      "dni": 123635,
+      "tipo_dni": "CC",
+      "email": "torres@gmail.com",
+      "pais_residencia": "ARG",
+      "codigo_postal": "110111",
+      "extension": "57",
+      "telefono": "456"
+    }
+  ],
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Camiseta",
+      "precio": "100",
+      "imagen": "https://www.oriontenis.com/wp-content/uploads/2022/08/HB9170_1.jpg",
+      "talla": [
+        "L",
+        "M",
+        "S"
+      ],
+      "color": "Rojo"
+    },
+    {
+      "id": "2",
+      "nombre": "Pantalones Vaqueros",
+      "precio": "120",
+      "imagen": "https://wranglerjeans.com.ar/wp-content/uploads/2022/11/JCH0343-1-1.jpg",
+      "talla": "M",
+      "color": "Azul"
+    },
+    {
+      "id": "3",
+      "nombre": "Zapatos de Cuero",
+      "precio": "200",
+      "imagen": "https://wranglerjeans.com.ar/wp-content/uploads/2022/11/JCH0343-1-1.jpg",
+      "talla": "42",
+      "color": "Negro"
+    },
+    {
+      "id": "4",
+      "nombre": "Bolso de Mano",
+      "precio": "80",
+      "imagen": "https://wranglerjeans.com.ar/wp-content/uploads/2022/11/JCH0343-1-1.jpg",
+      "color": "Marrón"
+    },
+    {
+      "id": "5",
+      "nombre": "Chaqueta de Invierno",
+      "precio": "250",
+      "imagen": "https://wranglerjeans.com.ar/wp-content/uploads/2022/11/JCH0343-1-1.jpg",
+      "talla": "XL",
+      "color": "Gris"
+    },
+    {
+      "id": "6",
+      "nombre": "Vestido de Noche",
+      "precio": "180",
+      "imagen": "https://wranglerjeans.com.ar/wp-content/uploads/2022/11/JCH0343-1-1.jpg",
+      "talla": "S",
+      "color": "Negro"
+    },
+    {
+      "id": "7",
+      "nombre": "Sombrero de Paja",
+      "precio": "50",
+      "imagen": "https://wranglerjeans.com.ar/wp-content/uploads/2022/11/JCH0343-1-1.jpg",
+      "color": "Beige"
+    },
+    {
+      "id": "8",
+      "nombre": "Reloj de Pulsera",
+      "precio": "150",
+      "imagen": "https://wranglerjeans.com.ar/wp-content/uploads/2022/11/JCH0343-1-1.jpg",
+      "color": "Plateado"
+    },
+    {
+      "id": "9",
+      "nombre": "Gafas de Sol",
+      "precio": "70",
+      "imagen": "https://wranglerjeans.com.ar/wp-content/uploads/2022/11/JCH0343-1-1.jpg",
+      "color": "Negro"
+    },
+    {
+      "id": "10",
+      "nombre": "Bufanda de Lana",
+      "precio": "30",
+      "imagen": "https://wranglerjeans.com.ar/wp-content/uploads/2022/11/JCH0343-1-1.jpg",
+      "color": "Verde"
+    }
+  ],
+  "domicilio": [
+    {
+      "idDomicilio": "123456789",
+      "paisDomicilio": "EjemploPais",
+      "provinciaDomicilio": "EjemploProvincia",
+      "ciudadDomicilio": "EjemploCiudad",
+      "direccionDomicilio": "EjemploDireccion",
+      "casaDomicilio": "EjemploCasa",
+      "edificioDomicilio": "EjemploEdificio",
+      "aptoDomicilio": "c511",
+      "codigoPostal": 12345,
+      "disponibleDesde": 11,
+      "disponibleHasta": 13,
+      "recibePersonalmente": true,
+      "id": "9911"
+    },
+    {
+      "id": "a21b232d-e65d-4f9a-b4ef-993cd7262772",
+      "paisDomicilio": "Colombia",
+      "provinciaDomicilio": "Bogota",
+      "ciudadDomicilio": "Bogota",
+      "direccionDomicilio": "Calle 89 G 112 G 19",
+      "casaDomicilio": "55",
+      "edificioDomicilio": "21",
+      "aptoDomicilio": "121",
+      "codigoPostal": "0465465",
+      "disponibleDesde": 11,
+      "disponibleHasta": 9,
+      "recibePersonalmente": true
+    },
+    {
+      "id": "93165e55-6a56-484c-97bf-0baab8587c22",
+      "paisDomicilio": "Colombia",
+      "provinciaDomicilio": "Bogota",
+      "ciudadDomicilio": "Bogota",
+      "direccionDomicilio": "Calle 89 G 112 G 19",
+      "casaDomicilio": "55",
+      "edificioDomicilio": "21",
+      "aptoDomicilio": "121",
+      "codigoPostal": "0465465",
+      "disponibleDesde": 9,
+      "disponibleHasta": 10,
+      "recibePersonalmente": true
+    }
+  ],
+  "tienda": [    
+      {
+        "id": "1",
+        "paisTienda": "EjemploPaís",
+        "provinciaTienda": "EjemploProvincia",
+        "ciudadTienda": "EjemploCiudad",
+        "nombreRecoge": "EjemploNombre",
+        "idRecoge": "EjemploID",
+        "numeroRecoge": 123456789,
+        "FechaEntrega": "2024-03-15T00:00:00Z",
+        "diaRetencion": 7,
+        "esRegalo": true
+      }
+    ],
+    "datosPago": [    
+      {
+        "tipoTarjeta": "TarjetaCredito",
+        "nombreBono": "Bono de Descuento",
+        "nombreBanco": "Banco de Prueba",
+        "nombreTarjeta": "John Doe",
+        "numTarjeta": 1234567890123456,
+        "FechaTarjeta": "2024-03-15T00:00:00Z",
+        "CVV": 123,
+        "Cuotas": 3,
+        "facturaElectronica": true,
+        "aceptaTerminos": true
+      }
+    ]
+     
+}

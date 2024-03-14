@@ -1,0 +1,125 @@
+<div class="ps-5 pe-5 pt-5 ">
+  <h4><b>Detalles de Envío</b></h4>
+  <hr>
+</div>
+
+
+<div class="ps-5 pe-5 pt-5 ">
+  <label for="formaEnvio">Escoja el método de envío</label>
+  <select class="form-select" id="formaEnvio" [(ngModel)]="selectedOption">
+    <option value=""> -- </option>
+    <option value="domicilio">Domicilio</option>
+    <option value="tienda">Recoger en Tienda</option>
+  </select>
+</div>
+
+
+<form *ngIf="selectedOption === 'tienda'" (ngSubmit)="onSubmitTienda()" class="p-5">
+  
+  <div id="entregaTienda">
+    <h4><b>Información de la tienda</b></h4>
+    
+    <label for="paisTienda" class="mt-3">Pais</label>
+    <input type="text" id="paisTienda" class="form-control" formControlName="paisTienda">
+    
+    <label for="provinciaTienda" class="mt-3">Provincia</label>
+    <input type="text" id="provinciaTienda" class="form-control" formControlName="provinciaTienda">
+    
+    <label for="ciudadTienda" class="mt-3">Ciudad de entrega</label>
+    <input type="text" id="ciudadTienda" class="form-control" formControlName="ciudadTienda">
+    
+    <label for="nombreRecoge" class="mt-3">Nombre del que recoge</label>
+    <input type="text" id="nombreRecoge" class="form-control" formControlName="nombreRecoge">
+    
+    <label for="idRecoge" class="mt-3">ID</label>
+    <input type="text" id="idRecoge" class="form-control" formControlName="idRecoge">
+    
+    <label for="numeroRecoge" class="mt-3">Numero Telefonico</label>
+    <input type="text" id="numeroRecoge" class="form-control" formControlName="numeroRecoge">
+    
+    <label for="FechaEntrega" class="mt-3">Fecha de Entrega</label>
+    <input type="date" id="FechaEntrega" class="form-control" formControlName="FechaEntrega">
+    
+    <label for="diaRetencion" class="mt-3">Dias de retencion</label>
+    <input type="text" id="diaRetencion" class="form-control" formControlName="diaRetencion">
+    <p class="mt-3">¿Es un regalo?</p>
+    <div>
+      <label class="switch" >
+        <input type="checkbox" class="form-control">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+  <div class="mt-3">
+    <button class="btn btn-outline-primary" routerLink="../form-pago" (click)="onSubmitTienda()">Siguiente</button>
+
+  </div>
+
+</form>
+
+<form *ngIf="selectedOption === 'domicilio'" [formGroup]="domicilioForm" (ngSubmit)="onSubmitDomicilio()"  class="p-5">
+
+  <div id="Domicilio">
+    <h4><b>Información de Domicilio</b></h4>
+    
+    <label for="paisDomicilio" class="mt-3">Pais</label>
+    <input type="text" id="paisDomicilio" class="form-control" formControlName="paisDomicilio">
+    
+    <label for="provinciaDomicilio" class="mt-3">Provincia</label>
+    <input type="text" id="provinciaDomicilio" class="form-control" formControlName="provinciaDomicilio">
+    
+    <label for="ciudadDomicilio" class="mt-3">Ciudad</label>
+    <input type="text" id="ciudadDomicilio" class="form-control" formControlName="ciudadDomicilio">
+    
+    <label for="direccionDomicilio" class="mt-3">Direccion de entrega</label>
+    <input type="text" id="direccionDomicilio" class="form-control" formControlName="direccionDomicilio">
+    
+    <label for="casaDomicilio" class="mt-3">Conjunto o casa</label>
+    <input type="text" id="casaDomicilio" class="form-control" formControlName="casaDomicilio">
+    
+    <label for="edificioDomicilio" class="mt-3">Edificio</label>
+    <input type="text" id="edificioDomicilio" class="form-control" formControlName="edificioDomicilio">
+    
+    <label for="aptoDomicilio" class="mt-3">Apto</label>
+    <input type="text" id="aptoDomicilio" class="form-control" formControlName="aptoDomicilio">
+    
+    <label for="codePostal" class="mt-3">Codigo Postal</label>
+    <input type="text" id="codePostal" class="form-control" formControlName="codigoPostal">
+    
+    <div class="row mt-3">
+      <label>Disponible desde:</label>
+      <div class="col-8">
+        <input type="number" name="" formControlName="disponibleDesde" id="" class="form-control"></div>
+      <div class="col-4">
+        <select class="form-control" >
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>  
+        </select>        
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <label>Hasta:</label>
+      <div class="col-8">
+        <input type="number" name="" id="" formControlName="disponibleHasta" class="form-control"></div>
+      <div class="col-4">
+        <select class="form-control">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>  
+        </select>        
+      </div>
+    </div>
+    <p class="mt-3">¿Lo recibe personalmente?</p>
+    <div>
+      <label class="switch">
+        <input type="checkbox" formControlName="recibePersonalmente">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+  <div class="mt-3">
+    <button id="btnDomicilio" class="btn btn-outline-primary" routerLink="../form-pago" (click)="onSubmitDomicilio()">Siguiente</button>
+
+  </div>
+</form>
+

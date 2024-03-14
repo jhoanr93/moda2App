@@ -1,0 +1,15 @@
+<div *ngIf="mostrarComponente" class="container">
+    <div class="row justify-content-center align-items-center min-vh-100">
+      <div class="col-md-6">
+        <div class="text-center">
+          <h1 class="display-3">Bienvenido a nuestra tienda</h1>
+          <p class="lead">¡Descubre todo lo que tenemos para ofrecerte!</p>
+          <button class="btn btn-primary btn-lg" type="button" routerLink="/list" (click)="ocultarLanding()">Explorar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <router-outlet *ngIf="!mostrarComponente"></router-outlet>
+
+

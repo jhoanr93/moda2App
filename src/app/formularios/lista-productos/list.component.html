@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 class="mt-5 mb-4">Productos Destacados</h2>
+  <div class="row">
+    <div *ngFor="let producto of productos" class="col-md-4">
+      <div class="product">
+
+        <div class="image-container">
+          <input type="checkbox" id="myCheckbox">
+          <label for="myCheckbox">
+            <img src="{{producto.imagen}}" alt="Producto 1" style="height: 200px; width: 200px;">
+          </label>
+        </div>
+        <h3>{{ producto.nombre}} </h3>
+        <p>{{ producto.talla}}</p>
+        <p>{{ producto.color}}</p>
+        <p>{{ producto.precio | currency }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="btn btn-outline-primary mt-5" type="button" routerLink="../form-cliente">Siguiente</button>
